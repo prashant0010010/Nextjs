@@ -1,0 +1,89 @@
+import ArticleLayout from "@/components/ArticleLayout";
+
+export const article = {
+  author: "Prashant Subedi",
+  date: "2024-09-05",
+  title: "Everything You Need to Know About SEO",
+  description:
+    "Discover the fundamentals of SEO including technical SEO, on-page SEO, off-page SEO, and e-commerce SEO. Learn how to optimize your website and boost your online presence.",
+};
+
+export const metadata = {
+  title: article.title,
+  description: "Explore comprehensive SEO strategies including technical, on-page, off-page, and e-commerce SEO to enhance your online visibility and drive traffic.",
+};
+ 
+export default (props) => (
+  <ArticleLayout article={article} {...props}>
+    <h1>Everything You Need to Know About SEO</h1>
+     <img
+      description="seo image, onpage, offpage and technical SEO"
+      src="/img/seo.png"
+      alt="SEO image"
+      style={{ width: "100%", height: "auto", marginBottom: "20px" }}
+    />
+
+    <p className="text-justify">
+      Search Engine Optimization (SEO) is a critical aspect of digital marketing that helps improve your website's visibility on search engines. This article will cover the essential components of SEO, including technical SEO, on-page SEO, off-page SEO, and e-commerce SEO. By understanding these elements, you can enhance your website’s performance and achieve better rankings on search engines.
+    </p>
+   <h2>Technical SEO</h2>
+    <p className="text-justify">
+      Technical SEO focuses on the backend structure and functionality of your website. It ensures that search engines can crawl and index your site effectively. Key aspects of technical SEO include:
+    </p>
+    <ul>
+      <li className="text-justify">Site Speed: Faster loading times improve user experience and are favored by search engines.</li>
+      <li className="text-justify">Mobile-Friendliness: With mobile-first indexing, your website must be optimized for mobile devices.</li>
+      <li className="text-justify">XML Sitemaps: These help search engines understand the structure of your site and index it more efficiently.</li>
+      <li className="text-justify">Robots.txt: This file guides search engines on which pages to crawl and which to avoid.</li>
+      <li className="text-justify">Secure Sockets Layer (SSL): HTTPS is a ranking factor, and securing your site with SSL enhances trust and security.</li>
+    </ul>
+
+   <a href="the-ultimate-guide-to-on-Page-SEO-for-E-Commerce-Success"> <h2>On-Page SEO</h2> </a>
+    <p className="text-justify">
+      On-page SEO involves optimizing individual pages on your website to rank higher and earn more relevant traffic. Important elements of on-page SEO include:
+    </p>
+    <ul>
+      <li className="text-justify">Title Tags: The title tag is crucial for search engines and should include relevant keywords.</li>
+      <li className="text-justify">Meta Descriptions: These provide a summary of the page content and encourage users to click through.</li>
+      <li className="text-justify">Headings (H1, H2, etc.): Proper use of headings helps organize content and improve readability.</li>
+      <li className="text-justify">Content Quality: High-quality, relevant content that answers users' questions can improve rankings and engagement.</li>
+      <li className="text-justify">Internal Linking: Linking to other pages on your site helps distribute page authority and improve user navigation.</li>
+      <li className="text-justify">Image Optimization: Use descriptive filenames and alt attributes to help search engines understand the content of your images.</li>
+    </ul>
+
+    <h2>Off-Page SEO</h2>
+    <p className="text-justify">
+      Off-page SEO refers to activities performed outside of your website to improve its search engine rankings. The primary focus is on building authority and trust. Key off-page SEO strategies include:
+    </p>
+    <ul>
+      <li className="text-justify">Backlinks: High-quality backlinks from reputable sites signal to search engines that your site is trustworthy and authoritative.</li>
+      <li className="text-justify">Social Media Marketing: Engaging with audiences on social media platforms can drive traffic and enhance your site's visibility.</li>
+      <li className="text-justify">Influencer Outreach: Collaborating with influencers can help promote your content and earn valuable backlinks.</li>
+      <li className="text-justify">Guest Blogging: Writing articles for other sites can build backlinks and drive referral traffic to your site.</li>
+    </ul>
+
+    <h2>E-Commerce SEO</h2>
+    <p className="text-justify">
+      E-commerce SEO is tailored specifically for online stores to improve their visibility and attract more customers. Key strategies include:
+    </p>
+    <ul>
+      <li className="text-justify">Product Descriptions: Write unique, keyword-rich descriptions for each product to improve search rankings.</li>
+      <li className="text-justify">Category Pages: Optimize category pages with relevant keywords and ensure they are well-structured.</li>
+      <li className="text-justify">User Reviews: Encourage customer reviews, as they can provide fresh content and improve credibility.</li>
+      <li className="text-justify">Rich Snippets: Implement structured data to enhance product listings with additional information in search results.</li>
+    </ul>
+      
+      
+ <img
+      description="e-commerce seo"
+      src="/img/ecommerce.png"
+      alt="ecommerce seo"
+      style={{ width: "100%", height: "auto", marginBottom: "20px" }}
+    />
+
+    <h2>Conclusion</h2>
+    <p className="text-justify">
+      SEO is a multifaceted discipline that requires a comprehensive approach to achieve success. By focusing on technical SEO, on-page SEO, off-page SEO, and e-commerce SEO, you can create a well-rounded strategy that improves your website’s visibility and drives more organic traffic. Stay updated with SEO trends and best practices to maintain and enhance your search engine rankings in the ever-evolving digital landscape.
+    </p>
+  </ArticleLayout>
+);
