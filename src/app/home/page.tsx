@@ -1,10 +1,8 @@
-'use client'
-
-import { useState, useEffect } from "react";
 import { Card } from "@/components/Card";
 import Section from "@/components/Section";
 import { ArticleWithSlug, getAllArticles } from "@/lib/article";
 import { formatDate } from "@/lib/formateDate";
+import { GetStaticProps } from "next";
 const ToolsSection = ({
   children,
   ...props
@@ -36,115 +34,22 @@ const Tool = ({
     </Card>
   );
 };
-const RecentArticles = () => {
-  const [articles, setArticles] = useState<ArticleWithSlug[]>([]);
-  
-  useEffect(() => {
-    const fetchArticles = async () => {
-      const articlesData = await getAllArticles();
-      setArticles(articlesData.slice(0, 3)); // Get the last 3 articles
-    };
-    fetchArticles();
-  }, []);
-
-  return (
-    <Section title="Recent Articles">
-      {articles.map((article, index) => (
-        <article key={article.slug} className="md:grid md:grid-cols-4 md:items-baseline">
-          {index === 0 && (
-            <Card className="md:col-span-3 custom-style-for-first-article">
-              <Card.Image
-                src={article.imageUrl || "/img/digital-or-traditional-marketing.jpg"}  // Provide a fallback image
-                alt={article.title}
-                width={600}
-                height={350}
-                className="custom-image-class"
-              />
-              <Card.Title href={`/articles/${article.slug}`}>
-                {article.title}
-              </Card.Title>
-              <Card.Eyebrow
-                as="time"
-                dateTime={article.date}
-                className="md:hidden"
-                decorate
-              >
-                {formatDate(article.date)}
-              </Card.Eyebrow>
-              <Card.Description>{article.description}</Card.Description>
-              <Card.Cta>Read article</Card.Cta>
-            </Card>
-          )}
-          {index === 1 && (
-            <Card className="md:col-span-3 custom-style-for-second-article">
-              <Card.Image
-                src={article.imageUrl || "/img/seo.png"}
-                alt={article.title}
-                width={550}
-                height={300}
-                className="custom-image-class"
-              />
-              <Card.Title href={`/articles/${article.slug}`}>
-                {article.title}
-              </Card.Title>
-              <Card.Eyebrow
-                as="time"
-                dateTime={article.date}
-                className="md:hidden"
-                decorate
-              >
-                {formatDate(article.date)}
-              </Card.Eyebrow>
-              <Card.Description>{article.description}</Card.Description>
-              <Card.Cta>Read article</Card.Cta>
-            </Card>
-          )}
-          {index === 2 && (
-            <Card className="md:col-span-3 custom-style-for-third-article">
-              <Card.Image
-                src={article.imageUrl || "/img/seo-performance.jpg"}
-                alt={article.title}
-                width={500}
-                height={250}
-                className="custom-image-class"
-              />
-              <Card.Title href={`/articles/${article.slug}`}>
-                {article.title}
-              </Card.Title>
-              <Card.Eyebrow
-                as="time"
-                dateTime={article.date}
-                className="md:hidden"
-                decorate
-              >
-                {formatDate(article.date)}
-              </Card.Eyebrow>
-              <Card.Description>{article.description}</Card.Description>
-              <Card.Cta>Read article</Card.Cta>
-            </Card>
-          )}
-          <Card.Eyebrow
-            as="time"
-            dateTime={article.date}
-            className="mt-1 hidden md:block"
-          >
-            {formatDate(article.date)}
-          </Card.Eyebrow>
-        </article>
-      ))}
-    </Section>
-  );
-};
-
-const HomePage = () => {
+export const getStaticProps: GetStaticProps = async () => {
+  const articles = await getAllArticles();
+  return {
+    props: {
+      articles: articles.slice(0, 3), // Fetch last 3 articles
+    },
+  };
+};const HomePage = ({ articles }: { articles: ArticleWithSlug[] }) => {
   return (
     <div className="space-y-20">
-      {/* Hero Section with Background Image */}
+      {/* Hero Section */}
       <div
         className="hero-section bg-cover bg-center text-white py-20 text-center"
         style={{
-          backgroundImage: "url('@/img/banner.jpg')",
-          backgroundColor: "#1c1c1c", // Greyish black color
+          backgroundImage: "url('/img/banner.jpg')",
+          backgroundColor: "#1c1c1c",
         }}
       >
         <h1 className="text-5xl font-bold mb-4">Welcome to The E-com</h1>
@@ -157,19 +62,40 @@ const HomePage = () => {
       </div>
 
       {/* Recent Articles Section */}
-      <RecentArticles />
+      <Section title="Recent Articles">
+        {articles.map((article, index) => (
+          <article key={article.slug} className="md:grid md:grid-cols-4 md:items-baseline">
+            <Card className="md:col-span-3 custom-style">
+              <Card.Image
+                src={article.imageUrl || "/img/default.jpg"} // Fallback image
+                alt={article.title}
+                width={600}
+                height={350}
+              />
+              <Card.Title href={`/articles/${article.slug}`}>
+                {article.title}
+              </Card.Title>
+              <Card.Eyebrow as="time" dateTime={article.date} decorate>
+                {formatDate(article.date)}
+              </Card.Eyebrow>
+              <Card.Description>{article.description}</Card.Description>
+              <Card.Cta>Read article</Card.Cta>
+            </Card>
+          </article>
+        ))}
+      </Section>
 
       {/* Tools Section */}
       <ToolsSection title="E-Commerce Tools">
         <Tool title="Shopify: Build and Grow Your Online Store">
           Shopify is the go-to platform for setting up your e-commerce store.
-          With an array of features and easy integration, it&apos;s perfect for
+          With an array of features and easy integration, it’s perfect for
           beginners and pros alike.
         </Tool>
         <Tool title="Google Analytics: Track and Optimize Performance">
-          Get detailed insights into your website&apos;s traffic, user behavior, and
-          conversion rates with Google Analytics. Essential for any serious
-          e-commerce site.
+          Get detailed insights into your website's traffic, user behavior,
+          and conversion rates with Google Analytics. Essential for any
+          serious e-commerce site.
         </Tool>
         <Tool title="Ahrefs: Master SEO for E-Commerce Success">
           Ahrefs provides powerful tools for SEO research, backlinks analysis,
