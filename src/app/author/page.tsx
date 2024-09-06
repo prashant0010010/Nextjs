@@ -45,7 +45,7 @@ const AuthorPage = () => {
   >
 <FaFacebook size={24} />  </a>
   <a
-    href="https://twitter.com/prashant_subedi"
+    href="https://x.com/sub09prashant"
     target="_blank"
     rel="noopener noreferrer"
     className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
