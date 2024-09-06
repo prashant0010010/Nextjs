@@ -53,8 +53,7 @@ const HomePage = async () => {
       <div
         className="hero-section bg-cover bg-center text-white py-20 text-center"
         style={{
-          backgroundImage: "url('/img/banner.jpg')",
-          backgroundColor: "#1c1c1c",
+         backgroundColor: "#1c1c1c",
         }}
       >
         <h1 className="text-5xl font-bold mb-4">Welcome to The E-com</h1>
@@ -72,7 +71,7 @@ const HomePage = async () => {
           <article key={article.slug} className="md:grid md:grid-cols-4 md:items-baseline">
             <Card className="md:col-span-3 custom-style">
               <Card.Image
-                src={article.imageUrl || "/img/default.jpg"}  // Fallback image
+                src={article.imageUrl || "/img/seo.png"}  // Fallback image
                 alt={article.title}
                 width={600}
                 height={350}
