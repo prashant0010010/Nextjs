@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa"; 
 
@@ -8,9 +9,11 @@ const AuthorPage = () => {
       <div className="max-w-md w-full space-y-8 p-10 bg-white dark:bg-gray-800 rounded-xl shadow-md">
         {/* Author Image */}
         <div className="flex justify-center">
-          <img
+          <Image
             src="/img/profile.png"  // Replace with actual image path
             alt="Prashant Subedi"
+            width="32"
+            height="32"
             className="w-32 h-32 rounded-full object-cover shadow-lg"
           />
         </div>
@@ -23,7 +26,7 @@ const AuthorPage = () => {
         {/* Author Bio */}
         <p className="text-center text-sm text-gray-600 dark:text-gray-400">
           Prashant Subedi is a passionate blogger focused on SEO and e-commerce. 
-          He started "The E-com" to help businesses optimize their SEO strategies and thrive in the e-commerce world.
+          He started &quot;The E-com&quot; to help businesses optimize their SEO strategies and thrive in the e-commerce world.
         </p>
         <div className="mt-4 flex justify-center space-x-4">
   {/* Social Media Links */}

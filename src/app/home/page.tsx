@@ -1,12 +1,8 @@
+import { useState, useEffect } from "react";
 import { Card } from "@/components/Card";
 import Section from "@/components/Section";
-import banner from "@/img/banner.jpg";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import { getAllArticles } from "@/lib/article";
+import { ArticleWithSlug, getAllArticles } from "@/lib/article";
 import { formatDate } from "@/lib/formateDate";
-
 const ToolsSection = ({
   children,
   ...props
@@ -38,16 +34,20 @@ const Tool = ({
     </Card>
   );
 };
-
-const RecentArticles = async () => {
-  const articles = await getAllArticles();
-
-  // Get the last 3 articles
-  const recentArticles = articles.slice(0, 3);
+const RecentArticles = () => {
+  const [articles, setArticles] = useState<ArticleWithSlug[]>([]);
+  
+  useEffect(() => {
+    const fetchArticles = async () => {
+      const articlesData = await getAllArticles();
+      setArticles(articlesData.slice(0, 3)); // Get the last 3 articles
+    };
+    fetchArticles();
+  }, []);
 
   return (
     <Section title="Recent Articles">
-      {recentArticles.map((article, index) => (
+      {articles.map((article, index) => (
         <article key={article.slug} className="md:grid md:grid-cols-4 md:items-baseline">
           {index === 0 && (
             <Card className="md:col-span-3 custom-style-for-first-article">
@@ -59,7 +59,7 @@ const RecentArticles = async () => {
                 className="custom-image-class"
               />
               <Card.Title href={`/articles/${article.slug}`}>
-                {article.title} 
+                {article.title}
               </Card.Title>
               <Card.Eyebrow
                 as="time"
@@ -83,7 +83,7 @@ const RecentArticles = async () => {
                 className="custom-image-class"
               />
               <Card.Title href={`/articles/${article.slug}`}>
-                {article.title} 
+                {article.title}
               </Card.Title>
               <Card.Eyebrow
                 as="time"
@@ -147,7 +147,7 @@ const HomePage = () => {
       >
         <h1 className="text-5xl font-bold mb-4">Welcome to The E-com</h1>
         <p className="text-lg mb-6">
-          Your Ultimate Guide to E-Commerce, SEO, and Digital Marketing 
+          Your Ultimate Guide to E-Commerce, SEO, and Digital Marketing
         </p>
         <a href="/articles" className="btn btn-lg btn-white">
           Explore Articles
@@ -155,7 +155,7 @@ const HomePage = () => {
       </div>
 
       {/* Recent Articles Section */}
-      {RecentArticles()}
+      <RecentArticles />
 
       {/* Tools Section */}
       <ToolsSection title="E-Commerce Tools">

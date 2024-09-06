@@ -55,9 +55,7 @@ const ProjectPage = () => {
   // ];
 
   return (
-    <SimpleLayout
-      title="The E-Com projects."
-      intro="" children={undefined}    >
+    <SimpleLayout title="The E-Com projects" intro="">
       {/* <ul
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
