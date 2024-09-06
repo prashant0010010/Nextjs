@@ -97,7 +97,7 @@ const HomePage = async () => {
           With an array of features and easy integration, it&apos;s perfect for beginners and pros alike.
         </Tool>
         <Tool title="Google Analytics: Track and Optimize Performance">
-          Get detailed insights into your website's traffic, user behavior, and conversion rates with Google Analytics. Essential for any serious e-commerce site.
+          Get detailed insights into your website&apos;s traffic, user behavior, and conversion rates with Google Analytics. Essential for any serious e-commerce site.
         </Tool>
         <Tool title="Ahrefs: Master SEO for E-Commerce Success">
           Ahrefs provides powerful tools for SEO research, backlinks analysis, and keyword tracking, helping you dominate the search engine results.
