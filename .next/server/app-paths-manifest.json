@@ -1,0 +1,7 @@
+{
+  "/speaking/page": "app/speaking/page.js",
+  "/articles/everything-you-need-to-know-about-seo/page": "app/articles/everything-you-need-to-know-about-seo/page.js",
+  "/articles/digital-marketing-traditional-marketing-comparison/page": "app/articles/digital-marketing-traditional-marketing-comparison/page.js",
+  "/page": "app/page.js",
+  "/projects/page": "app/projects/page.js"
+}
