@@ -8,7 +8,7 @@ const AuthorPage = () => {
       <div className="max-w-md w-full space-y-8 p-10 bg-white dark:bg-gray-800 rounded-xl shadow-md">
         {/* Author Image */}
         <div className="flex justify-center">
-          <img
+          <Image
             src="/img/prashant.png"  // Replace with actual image path
             alt="Prashant Subedi"
             className="w-32 h-32 rounded-full object-cover shadow-lg"
