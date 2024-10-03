@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "../style/globals.css";
 import { Providers } from "./providers";
 import Layout from "@/components/Layout";
-
+import { GoogleAnalytics } from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,6 +22,7 @@ export default function RootLayout({
         <Providers>
           <div className="flex w-full bg-black overflow-hidden">
             <Layout>{children}</Layout>
+            <GoogleAnalytics gaId="G-1WZV1Q0E63" />
           </div>
         </Providers>
       </body>

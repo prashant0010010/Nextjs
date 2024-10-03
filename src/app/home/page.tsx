@@ -161,7 +161,7 @@ const HomePage = () => {
       <ToolsSection title="E-Commerce Tools">
         <Tool title="Shopify: Build and Grow Your Online Store">
           Shopify is the go-to platform for setting up your e-commerce store.
-          With an array of features and easy integration, it’s perfect for
+          With an array of features and easy integration, it&apos;s perfect for
           beginners and pros alike.
         </Tool>
         <Tool title="Google Analytics: Track and Optimize Performance">
