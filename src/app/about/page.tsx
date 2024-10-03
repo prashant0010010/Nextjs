@@ -26,7 +26,7 @@ const AboutPage = () => {
               Welcome to <a href="/home"> <strong>The E-com</strong> </a>, your go-to resource for all things e-commerce, SEO, and digital marketing. We started with a passion for helping businesses thrive in the online marketplace, and today, we continue to empower entrepreneurs, marketers, and e-commerce enthusiasts with the latest strategies and insights.
             </p>
             <p>
-              Our journey began with a simple idea: to demystify e-commerce and make SEO and digital marketing accessible to everyone. Whether you&apos;re launching your first online store or looking to scale your existing business, we provide the tools, tips, and resources you need to succeed.
+              Our journey began with a simple idea: to demystify e-commerce and make SEO and digital marketing accessible to everyone. Whether you're launching your first online store or looking to scale your existing business, we provide the tools, tips, and resources you need to succeed.
             </p>
             <p>
               At <strong>The E-com</strong>, we understand the power of SEO in driving traffic and sales. Our expert team is dedicated to delivering actionable advice on optimizing your website, boosting your search rankings, and enhancing your digital marketing efforts.

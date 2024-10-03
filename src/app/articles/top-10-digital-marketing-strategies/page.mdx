@@ -2,7 +2,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 
 export const article = {
   author: "Prashant Subedi",
-  date: "2024-09-05",
+  date: "2024-02-05",
   title: "Top 10 Most Effective Digital Marketing Strategies",
   description:
     "Explore the top 10 digital marketing strategies that can elevate your business. Learn how to implement SEO, content marketing, and more to reach your target audience and boost conversions.",
@@ -15,12 +15,15 @@ export const metadata = {
 
 export default (props) => (
   <ArticleLayout article={article} {...props} style="justify">
+
+      <head>
+       <title>{metadata.title}</title>
+       <meta name="description" content={metadata.description} />
+       <link rel="canonical" href="https://prashant123.com.np/articles/effective-digital-marketing-strategies" />
+        </head>
+
     <h1>Top 10 Most Effective Digital Marketing Strategies</h1>
-    <Image
-      src="/img/digital-marketing-strategies.jpg"
-      alt="Digital Marketing Strategies"
-      style={{ width: "100%", height: "auto", marginBottom: "20px" }}
-    />
+   
     <p className="text-justify">
       The rapid evolution of digital marketing has transformed the way businesses connect with their audiences. As technology advances and internet usage grows, companies must adopt and refine strategies that effectively reach their target customers. From search engine optimization to social media marketing, the digital landscape offers a variety of tools to drive traffic, generate leads, and convert those leads into loyal customers.
     </p>
@@ -87,11 +90,7 @@ export default (props) => (
     <p className="text-justify">
       CRO focuses on improving the effectiveness of your website or landing pages to increase the percentage of visitors who take desired actions, such as making a purchase or signing up for a newsletter. By analyzing user behavior and testing various elements, CRO aims to enhance user experience and maximize conversion rates, driving business growth.
     </p>
-    <Image
-      src="/img/conversion-rate-optimization.png"
-      alt="Conversion Rate Optimization"
-      style={{ width: "100%", height: "auto", marginBottom: "20px" }}
-    />
+   
 
     <p className="text-justify">
       By incorporating these digital marketing strategies, businesses can enhance brand visibility, engage with their audience, and achieve their goals in today&apos;s competitive digital landscape.

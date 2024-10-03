@@ -2,7 +2,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 
 export const article = {
   author: "Prashant Subedi",
-  date: "2024-09-05",
+  date: "2023-09-05",
   title: "Everything You Need to Know About SEO",
   description:
     "Discover the fundamentals of SEO including technical SEO, on-page SEO, off-page SEO, and e-commerce SEO. Learn how to optimize your website and boost your online presence.",
@@ -11,20 +11,45 @@ export const article = {
 export const metadata = {
   title: article.title,
   description: "Explore comprehensive SEO strategies including technical, on-page, off-page, and e-commerce SEO to enhance your online visibility and drive traffic.",
+   openGraph: {
+     title: article.title,
+    description: article.description,
+    url: "https://prashant123.com.np/articles/everything-you-need-to-know-about-seo",
+    type: "article",
+    images: [
+      {
+        url: "https://prashant123.com.np/articles/everything-on-page-seo",
+        width: 1800,
+        height: 900,
+        alt: "Everything about On-page SEO",
+      },
+    ],
+    site_name: "The E-Com",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Everything You Need to Know About On-Page SEO: A Complete Guide",
+    description: "Unlock the secrets of On-Page SEO to improve your site&apos;s Google ranking.",
+
+    image: "https://prashant123.com.np/articles/everything-on-page-seo",
+    site: "@sub09prashant",
+    creator: "@sub09prashant",
+  },
 };
  
 export default (props) => (
   <ArticleLayout article={article} {...props}>
+    <head>
+       <title>{metadata.title}</title>
+       <meta name="description" content={metadata.description} />
+       <link rel="canonical" href="https://prashant123.com.np/articles/everything-on-page-seo" />
+    </head>
     <h1>Everything You Need to Know About SEO</h1>
-     <Image
-      description="seo image, onpage, offpage and technical SEO"
-      src="/img/seo.png"
-      alt="SEO image"
-      style={{ width: "100%", height: "auto", marginBottom: "20px" }}
-    />
+    
 
     <p className="text-justify">
-      Search Engine Optimization (SEO) is a critical aspect of digital marketing that helps improve your website&apos;s visibility on search engines. This article will cover the essential components of SEO, including technical SEO, on-page SEO, off-page SEO, and e-commerce SEO. By understanding these elements, you can enhance your website&apos;s performance and achieve better rankings on search engines.
+      Search Engine Optimization (SEO) is a critical aspect of digital marketing that helps improve your website&apos;s visibility on search engines. This article will cover the essential components of SEO, including technical SEO, on-page SEO, off-page SEO, and e-commerce SEO. By understanding these elements, you can enhance your website’s performance and achieve better rankings on search engines.
     </p>
    <h2>Technical SEO</h2>
     <p className="text-justify">
@@ -73,17 +98,9 @@ export default (props) => (
       <li className="text-justify">Rich Snippets: Implement structured data to enhance product listings with additional information in search results.</li>
     </ul>
       
-      
- <Image
-      description="e-commerce seo"
-      src="/img/ecommerce.png"
-      alt="ecommerce seo"
-      style={{ width: "100%", height: "auto", marginBottom: "20px" }}
-    />
-
     <h2>Conclusion</h2>
     <p className="text-justify">
-      SEO is a multifaceted discipline that requires a comprehensive approach to achieve success. By focusing on technical SEO, on-page SEO, off-page SEO, and e-commerce SEO, you can create a well-rounded strategy that improves your website&apos;s visibility and drives more organic traffic. Stay updated with SEO trends and best practices to maintain and enhance your search engine rankings in the ever-evolving digital landscape.
+      SEO is a multifaceted discipline that requires a comprehensive approach to achieve success. By focusing on technical SEO, on-page SEO, off-page SEO, and e-commerce SEO, you can create a well-rounded strategy that improves your website’s visibility and drives more organic traffic. Stay updated with SEO trends and best practices to maintain and enhance your search engine rankings in the ever-evolving digital landscape.
     </p>
   </ArticleLayout>
 );

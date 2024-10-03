@@ -12,7 +12,7 @@ import { type Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Projects are comming soon...",
+  description: "Things I’ve made trying to put my dent in the universe.",
 };
 
 const ProjectPage = () => {
@@ -55,7 +55,9 @@ const ProjectPage = () => {
   // ];
 
   return (
-    <SimpleLayout title="The E-Com projects" intro="">
+    <SimpleLayout
+      title="The E-Com projects."
+      intro="" children={undefined}    >
       {/* <ul
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"

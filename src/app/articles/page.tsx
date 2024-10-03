@@ -7,12 +7,17 @@ import React from "react";
 const Article = ({ article, index }: { article: ArticleWithSlug, index: number }) => {
   // Define different images for the first three articles
   const images = [
-    "/img/digital-or-traditional-marketing.jpg", // Image for the first article
-    "/img/seo.png", // Image for the second article
-    "/img/seo-performance.jpg",
-    "/img/ecommerce-onpage-seo.png",
-    "/img/digital-marketing-strategies.jpg", 
-    "/img/types-of-seo.jpg"// Image for the third article
+    "/img/boost-website-traffic-seo.jpg", // Image for the first article
+    "/img/digital-traditional-marketing-comparison.jpg",
+    "/img/digital-marketing-strategies.jpg",
+    "/img/seo-career-path.jpg", //fourth image
+    "/img/mastering-on-page-seo.jpg",
+    "/img/what-is-on-page-seo.jpg",
+    "/img/how-to-start-seo-career.jpg",
+    // "/img/.jpg",
+    "/img/banner.jpg",
+    "/img/banner.jpg",
+    // "img/seo-",
   ];
 
   return (

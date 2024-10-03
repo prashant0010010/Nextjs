@@ -2,7 +2,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 
 export const article = {
   author: "Prashant Subedi",
-  date: "2024-09-05",
+  date: "2024-02-05",
   title: "The Ultimate Guide to On-Page SEO for E-Commerce Success",
   description:
     "Master on-page SEO techniques tailored for e-commerce. Learn how to optimize your product pages, content, and site structure to boost visibility and conversions.",
@@ -15,17 +15,20 @@ export const metadata = {
 
 export default (props) => (
   <ArticleLayout article={article} {...props} style="justify">
+
+    <head>
+      <title>{metadata.title}</title>
+      <meta name="description" content={metadata.description} />
+      <link rel="canonical" href="https://prashant123.com.np/articles/boost-your-page-ranking" />
+    </head>
+
     <h1>The Ultimate Guide to On-Page SEO for E-Commerce Success</h1>
-     <Image
-      src="/img/ecommerce-onpage-seo.png"
-      alt="E-commerce On-Page SEO"
-      style={{ width: "100%", height: "auto", marginBottom: "20px" }}
-    />
+
     <p className="text-justify">
       In the competitive world of e-commerce, mastering on-page SEO is critical for achieving visibility, driving traffic, and converting visitors into customers. On-page SEO refers to the optimization of elements on your website that impact search engine rankings and user experience. From content quality to technical aspects like page load speed, on-page SEO covers a wide range of factors that can influence your e-commerce success.
     </p>
 
-   
+
     <h2>Understanding On-Page SEO</h2>
     <p className="text-justify">
       On-page SEO involves optimizing individual pages on your e-commerce website to rank higher on search engines and earn more relevant traffic. It includes both content-related aspects and technical factors that make your website more accessible and appealing to search engines like Google. By focusing on on-page SEO, you can ensure that your e-commerce store meets the needs of both users and search engines, leading to improved rankings and increased sales using <a href="top-10-digital-marketing-strategies">digital marketing</a>.
@@ -33,12 +36,12 @@ export default (props) => (
 
     <h2>Key Elements of On-Page SEO for E-Commerce</h2>
     <p className="text-justify">
-      To maximize the potential of your e-commerce website, it&apos;s essential to pay attention to various on-page SEO elements. Below are some critical components that should be optimized for better rankings and enhanced user experience:
+      To maximize the potential of your e-commerce website, it’s essential to pay attention to various on-page SEO elements. Below are some critical components that should be optimized for better rankings and enhanced user experience:
     </p>
 
     <h3>1. Title Tags and Meta Descriptions</h3>
     <p className="text-justify">
-      Title tags and meta descriptions are vital for attracting users to your site from search engine results pages (SERPs). For e-commerce websites, it&apos;s crucial to include primary keywords related to your products in the title tags. Meta descriptions should be compelling and informative, providing a brief summary of what users can expect on the page. Ensure that each product page has a unique title tag and meta description to avoid duplication issues and improve click-through rates (CTR).
+      Title tags and meta descriptions are vital for attracting users to your site from search engine results pages (SERPs). For e-commerce websites, it’s crucial to include primary keywords related to your products in the title tags. Meta descriptions should be compelling and informative, providing a brief summary of what users can expect on the page. Ensure that each product page has a unique title tag and meta description to avoid duplication issues and improve click-through rates (CTR).
     </p>
 
     <h3>2. Product Descriptions</h3>
@@ -61,11 +64,6 @@ export default (props) => (
       With the increasing number of users shopping on mobile devices, having a mobile-friendly e-commerce site is more important than ever. Google uses mobile-first indexing, meaning that it primarily uses the mobile version of your site for ranking purposes. Ensure that your site is responsive, with easy navigation and fast loading times on mobile devices. A seamless mobile experience not only improves your <a href="everything-you-need-to-know-about-seo"> SEO </a> but also enhances customer satisfaction.
     </p>
 
-    <Image
-      src="/img/mobile-friendly-ecommerce.jpg"
-      alt="Mobile-Friendly E-Commerce Site"
-      style={{ width: "100%", height: "auto", marginBottom: "20px" }}
-    />
 
     <h3>6. Internal Linking</h3>
     <p className="text-justify">
@@ -74,7 +72,7 @@ export default (props) => (
 
     <h3>7. Page Load Speed</h3>
     <p className="text-justify">
-      Page load speed is a critical factor for both SEO and user experience. Slow-loading pages can lead to high bounce rates, negatively impacting your rankings and conversions. To improve your e-commerce site's load speed, consider compressing images, minimizing code, and leveraging browser caching. A fast website keeps users engaged and can lead to higher conversion rates.
+      Page load speed is a critical factor for both SEO and user experience. Slow-loading pages can lead to high bounce rates, negatively impacting your rankings and conversions. To improve your e-commerce site&apos;s load speed, consider compressing images, minimizing code, and leveraging browser caching. A fast website keeps users engaged and can lead to higher conversion rates.
     </p>
 
     <h2>Optimizing E-Commerce Content for On-Page SEO</h2>
@@ -99,7 +97,7 @@ export default (props) => (
 
     <h2>Technical Considerations for E-Commerce SEO</h2>
     <p className="text-justify">
-      While content and on-page elements are crucial, technical SEO also plays a significant role in your e-commerce site's success. Below are some technical considerations to keep in mind:
+      While content and on-page elements are crucial, technical SEO also plays a significant role in your e-commerce site&apos;s success. Below are some technical considerations to keep in mind:
     </p>
 
     <h3>1. Structured Data Markup</h3>

@@ -2,7 +2,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 
 export const article = {
   author: "Prashant Subedi",
-  date: "2024-09-03",
+  date: "2024-05-03",
   title: "Why is SEO a Good Career Path?",
   description:
     "Explore why SEO is a promising career path, from job opportunities to flexibility. Learn how mastering SEO can open doors in the digital economy.",
@@ -15,6 +15,13 @@ export const metadata = {
 
 export default (props) => (
   <ArticleLayout article={article} {...props} style="justify">
+
+     <head>
+       <title>{metadata.title}</title>
+       <meta name="description" content={metadata.description} />
+       <link rel="canonical" href="https://prashant123.com.np/articles/seo-career-path" />
+       </head>
+
     <h1>Why is <a href="everything-you-need-to-know-about-seo"> SEO  </a> a Good Career Path?</h1>
     <p className="text-justify">
       SEO presents a promising career path for individuals enthusiastic about
@@ -25,27 +32,18 @@ export default (props) => (
       compelling reasons why SEO is an excellent career choice for anyone.
     </p>
 
-    <Image
-      description="seo image, onpage, offpage and technical SEO"
-      src="/img/types-of-seo.jpg"
-      alt="SEO Career Path"
-      style={{ width: "100%", height: "auto", marginBottom: "20px" }}
-    />
+   
 
     <h2>What Jobs are in Demand in the Market?</h2>
     <p className="text-justify">
-      Before delving into why <a href="/articles/everything-you-need-to-know-about-seo">SEO</a> is an appealing career path, it's essential
+      Before delving into why <a href="/articles/everything-you-need-to-know-about-seo">SEO</a> is an appealing career path, it&apos;s essential
       to assess the current and future job demands in the market. In Nepal,
       technical roles within the Information Technology sector have limited job
       opportunities. Developers, whether in application or web development,
-      often struggle to earn adequate income. However, there's potential for a
+      often struggle to earn adequate income. However, there&apos;s potential for a
       career switch or supplementary income in certain sectors.
     </p>
-    <Image
-      src="/img/seo-demand.jpg"
-      alt="SEO Demand"
-      style={{ width: "100%", height: "auto", marginBottom: "20px" }}
-    />
+   
     <p className="text-justify">
       SEO, known for its relatively easy learning curve and requiring basic
       technical knowledge, is readily adaptable as a skill set. Search engines
@@ -94,11 +92,7 @@ export default (props) => (
       empower freelancers to work independently, catering to diverse clients
       and projects.
     </p>
-    <img
-      src="/img/seo-freelance.jpg"
-      alt="SEO Freelancing"
-      style={{ width: "100%", height: "auto", marginBottom: "20px" }}
-    />
+   
     <p className="text-justify">
       In Nepal, the rapid growth of e-commerce, travel blogs, and other service
       sectors highlights the pivotal role of SEO in enhancing business
@@ -115,12 +109,11 @@ export default (props) => (
       visibility, skilled SEO professionals play a crucial role in boosting
       search rankings and driving organic traffic. Accessible to students for
       supplemental income and ideal for career changers seeking dynamic
-      opportunities, SEO offers flexibility and growth potential in Nepal's
+      opportunities, SEO offers flexibility and growth potential in Nepal&apos;s
       evolving digital landscape. Mastering SEO opens doors to freelance work,
       entrepreneurial ventures, and impactful roles in expanding online sectors
-      like e-commerce and travel blogs, making it a rewarding choice in today's
+      like e-commerce and travel blogs, making it a rewarding choice in today&apos;s
       digital economy.
     </p>
-     
   </ArticleLayout>
 );

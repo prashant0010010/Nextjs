@@ -52,7 +52,7 @@ const RecentArticles = async () => {
           {index === 0 && (
             <Card className="md:col-span-3 custom-style-for-first-article">
               <Card.Image
-                src={article.imageUrl || "/img/digital-or-traditional-marketing.jpg"}  // Provide a fallback image
+                src={article.imageUrl || "/img/boost-website-traffic-seo.jpg"}  // Provide a fallback image
                 alt={article.title}
                 width={600}
                 height={350}
@@ -76,7 +76,7 @@ const RecentArticles = async () => {
           {index === 1 && (
             <Card className="md:col-span-3 custom-style-for-second-article">
               <Card.Image
-                src={article.imageUrl || "/img/seo.png"}
+                src={article.imageUrl || "/img/digital-traditional-marketing.jpg"}
                 alt={article.title}
                 width={550}
                 height={300}
@@ -100,7 +100,7 @@ const RecentArticles = async () => {
           {index === 2 && (
             <Card className="md:col-span-3 custom-style-for-third-article">
               <Card.Image
-                src={article.imageUrl || "/img/seo-performance.jpg"}
+                src={article.imageUrl || "/img/mobile-optimization.jpg"}
                 alt={article.title}
                 width={500}
                 height={250}
@@ -161,11 +161,11 @@ const HomePage = () => {
       <ToolsSection title="E-Commerce Tools">
         <Tool title="Shopify: Build and Grow Your Online Store">
           Shopify is the go-to platform for setting up your e-commerce store.
-          With an array of features and easy integration, it&apos;s perfect for
+          With an array of features and easy integration, it’s perfect for
           beginners and pros alike.
         </Tool>
         <Tool title="Google Analytics: Track and Optimize Performance">
-          Get detailed insights into your website&apos;s traffic, user behavior, and
+          Get detailed insights into your website's traffic, user behavior, and
           conversion rates with Google Analytics. Essential for any serious
           e-commerce site.
         </Tool>
