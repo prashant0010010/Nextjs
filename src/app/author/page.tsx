@@ -23,7 +23,7 @@ const AuthorPage = () => {
         {/* Author Bio */}
         <p className="text-center text-sm text-gray-600 dark:text-gray-400">
           Prashant Subedi is a passionate blogger focused on SEO and e-commerce. 
-          He started "The E-com" to help businesses optimize their SEO strategies and thrive in the e-commerce world.
+          He started &quot;The E-com&quot; to help businesses optimize their SEO strategies and thrive in the e-commerce world.
         </p>
         <div className="mt-4 flex justify-center space-x-4">
   {/* Social Media Links */}
